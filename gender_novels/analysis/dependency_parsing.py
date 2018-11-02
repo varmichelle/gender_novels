@@ -43,7 +43,7 @@ def pickle(novel, parser):
     try:
         tree = load_pickle(f'dep_tree_{str(novel)}')
     except (IOError, FileNotFoundError):
-        sentences = sent_tokenize(novel.text.lower().replace("\n", " "))
+        sentences = sent_tokenize(novel.text.replace("\n", " "))
         he_she_sentences = []
         for sentence in sentences:
             add_sentence = False
